@@ -51,6 +51,7 @@ public class Player : MonoBehaviour {
             Dash(dashDir);
             _hasStartedDashingAtThisFrame = false;
         }
+        if (IsForcingStop) _rb.velocity = new Vector2(0, _rb.velocity.y);
     }
     
     private void UpdateStates() {

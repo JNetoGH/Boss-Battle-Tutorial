@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour {
     private float timeBtwDamage = 1.5f;
     
     public Animator camAnim;
-    public Slider healthBar;
+    //public Slider healthBar;
     private Animator anim;
     public bool isDead;
 
@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour {
         // give the player some time to recover before taking more damage !
         if (timeBtwDamage > 0) timeBtwDamage -= Time.deltaTime;
         
-        healthBar.value = health;
+        //healthBar.value = health;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
