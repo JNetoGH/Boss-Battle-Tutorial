@@ -8,14 +8,8 @@ public class introBehavior : StateMachineBehaviour {
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         rand = Random.Range(0, 2);
-
-        if (rand == 0)
-        {
-            animator.SetTrigger("idle");
-        }
-        else {
-            animator.SetTrigger("jump");
-        }
+        if (rand == 0) animator.SetTrigger("idle");
+        else animator.SetTrigger("jump");
 	}
     
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

@@ -18,14 +18,8 @@ public class JumpBehavior : StateMachineBehaviour {
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (timer <= 0)
-        {
-            animator.SetTrigger("idle");
-        }
-        else {
-            timer -= Time.deltaTime;
-        }
-
+        if (timer <= 0) animator.SetTrigger("idle");
+        else timer -= Time.deltaTime;
         Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
 	}

@@ -14,18 +14,12 @@ public class IdleBehavior : StateMachineBehaviour {
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (timer <= 0)
-        {
-            animator.SetTrigger("jump");
-        }
-        else {
-            timer -= Time.deltaTime;
-        }
+        if (timer <= 0) animator.SetTrigger("jump");
+        else timer -= Time.deltaTime;
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	
 	}
-
 
 }
